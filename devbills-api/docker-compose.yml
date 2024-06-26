@@ -2,9 +2,9 @@ version: '3'
 
 services:
   mongo:
-    container_name: mongodb-devbills
+    container_name: devbills-mongodb
     restart: always
-    image: mongo
+    image: mongo:4.4.18
     environment:
       MONGO_INITDB_ROOT_USERNAME: 'devbills'
       MONGO_INITDB_ROOT_PASSWORD: 'pass123'
