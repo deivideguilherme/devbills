@@ -3,10 +3,12 @@ import { CategoriesRepository } from "../database/repositories/categories.reposi
 import { TransactionsRepository } from "../database/repositories/transactions.repository";
 import {
   CreateTransactionDTO,
+  GetDashBoardDTO,
   IndexTransactionsDTO,
 } from "../dtos/transactions.dto";
 import { Transaction } from "../entities/transactions.entity";
 import { AppError } from "../errors/app.error";
+import { Balance } from "../entities/balance.entity";
 
 export class TransactionsService {
   constructor(
@@ -47,5 +49,23 @@ export class TransactionsService {
     const transactions = await this.transactionsRepository.index(filters);
 
     return transactions;
+  }
+
+  async getDashboard({ beginDate, endDate }: GetDashBoardDTO) {
+    let balance = await this.transactionsRepository.getBalance({
+      beginDate,
+      endDate,
+    });
+
+    if (!balance) {
+      balance = new Balance({
+        _id: null,
+        incomes: 0,
+        expenses: 0,
+        balance: 0,
+      });
+    }
+
+    return balance;
   }
 }
