@@ -29,3 +29,13 @@ export const getDashboardSchema = {
 
 const getDashboardObject = z.object(getDashboardSchema);
 export type GetDashBoardDTO = z.infer<typeof getDashboardObject>;
+
+//Dados do balanço geral por ano
+export const getFinancialEvolutionSchema = {
+  year: z.string(),
+};
+
+const getFinancialEvolutionObject = z.object(getFinancialEvolutionSchema);
+export type getFinancialEvolutionDTO = z.infer<
+  typeof getFinancialEvolutionObject
+>;

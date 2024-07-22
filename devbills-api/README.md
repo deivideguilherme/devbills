@@ -28,6 +28,6 @@
 
 -> por período (início e fim);
 
-# Dados de balanço com filtros:
+# Dados de balanço geral do ano com filtros:
 
 -> por ano;
