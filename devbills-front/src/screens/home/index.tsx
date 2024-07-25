@@ -1,8 +1,9 @@
 import { InputMask } from '@react-input/mask';
 
-import { Button } from '../../components/button';
 import { ButtonIcon } from '../../components/button-icon';
 import { Card } from '../../components/card';
+import { CreateCategoryDialog } from '../../components/create-category-dialog';
+import { CreateCTransactionDialog } from '../../components/create-transaction-dialog';
 import { Input } from '../../components/input';
 import { Logo } from '../../components/logo';
 import { Title } from '../../components/title';
@@ -19,6 +20,7 @@ import {
   Main,
   SearchTransaction,
   Section,
+  TransectionGroup,
 } from './styles';
 
 export function Home() {
@@ -27,8 +29,8 @@ export function Home() {
       <Header>
         <Logo />
         <div>
-          <Button>Nova Transação</Button>
-          <Button>Nova Categoria</Button>
+          <CreateCTransactionDialog />
+          <CreateCategoryDialog />
         </div>
       </Header>
       <Main>
@@ -99,6 +101,8 @@ export function Home() {
               <Input variant="black" placeholder="Procurar Transação" />
               <ButtonIcon />
             </SearchTransaction>
+          </header>
+          <TransectionGroup>
             <Transaction
               id={1}
               amount={20000}
@@ -106,7 +110,7 @@ export function Home() {
               category={{ title: 'Alimentação', color: '#ff33bb' }}
               title="Mercado"
             />
-          </header>
+          </TransectionGroup>
         </Aside>
       </Main>
     </>
