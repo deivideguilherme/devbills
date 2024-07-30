@@ -2,17 +2,21 @@ import { styled } from 'styled-components';
 
 import { theme } from '../../styles/theme';
 
+type CategoryBadgePros = {
+  $color: string;
+};
+
 export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem; //(24px/16 = 1.5 rem)
+  padding: 1.5rem;
   width: 100%;
 
   > div {
     display: flex;
     align-items: center;
-    gap: 0.5rem; //8px/16 = 0.5
+    gap: 0.5rem;
   }
 `;
 
@@ -58,7 +62,7 @@ export const ChartContainer = styled.div`
   padding: 1rem;
   background-color: ${theme.colors.dark};
   border-radius: 0.25rem;
-  gap: 0.25rem;
+  gap: 0.75rem;
 
   header {
     display: flex;
@@ -100,8 +104,29 @@ export const SearchTransaction = styled.div`
   gap: 0.5rem;
 `;
 
-export const TransectionGroup = styled.div`
+export const TransactionGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0 0.75rem;
+  padding: 0 0.75rem;
+`;
+
+export const CategoryBadge = styled.span<CategoryBadgePros>`
+  display: flex;
+  font-size: row;
+  align-items: center;
+  gap: 0.25rem;
+
+  font-size: 0.625rem;
+  font-weight: 400;
+  border: 1px solid ${(props) => props.$color};
+  color: ${(props) => props.$color};
+  padding: 0.25rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+
+  svg {
+    fill: ${theme.colors.error};
+    width: 0.875rem;
+    height: 0.875rem;
+  }
 `;

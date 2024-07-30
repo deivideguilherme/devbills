@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Content, Overlay, Portal, Root, Trigger } from './styles';
+import { Overlay, Root, Portal, Content, Trigger } from './styles';
 
 type DialogProps = {
   children: ReactNode; //Para tipar qualquer coisa que vai dentro do React

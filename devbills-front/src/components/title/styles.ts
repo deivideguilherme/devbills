@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.375rem; //6px/16 = 0.375
+  gap: 0.375rem;
 
   h2 {
     font-size: 1.25rem;

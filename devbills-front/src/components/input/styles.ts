@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 import { theme } from '../../styles/theme';
 
@@ -14,13 +14,13 @@ export const Container = styled.div<ContainerProps>`
 
   label {
     color: ${theme.colors.white};
-    font-size: 0.625rem; //10px/16 = 0.625
+    font-size: 0.625rem;
   }
 
   input {
     height: 2.25rem;
     background-color: ${(props) => theme.colors[props.$variant]};
-    border: none;
+    border: 0;
     border-radius: 0.25rem;
     padding: 0 0.75rem;
     color: ${theme.colors.neutral};
@@ -36,5 +36,12 @@ export const Container = styled.div<ContainerProps>`
     &::placeholder {
       color: ${theme.colors.neutral};
     }
+  }
+
+  span {
+    margin-top: 0.125rem;
+    font-size: 0.625rem;
+    line-height: 90%;
+    color: ${theme.colors.error};
   }
 `;

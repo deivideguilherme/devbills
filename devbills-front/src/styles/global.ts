@@ -16,7 +16,7 @@ export default createGlobalStyle`
   }
 
   body, input, button, select {
-    font: 1rem 'Lexand', sans-serif; // = 16px   (12px/16 = 0.75rem)
+    font: 1rem 'Lexand', sans-serif; // 1rem = 16px   (12px/16 = 0.75rem)
   }
 
   h1, h2, p, span, strong, button, label, input {

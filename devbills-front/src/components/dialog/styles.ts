@@ -4,11 +4,9 @@ import { styled } from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const Root = styled(Dialog.Root)``;
-
 export const Portal = styled(Dialog.Portal)``;
-
 export const Trigger = styled(Dialog.Trigger)`
-  border: none;
+  border: 0;
   background-color: transparent;
 `;
 
@@ -27,6 +25,7 @@ export const Overlay = styled(Dialog.Overlay)`
     }
   }
 `;
+
 export const Content = styled(Dialog.Content)`
   background-color: ${theme.colors.dark};
   border-radius: 0.5rem;
@@ -37,7 +36,6 @@ export const Content = styled(Dialog.Content)`
   width: 100%;
   max-width: 25rem;
   padding: 1rem;
-  animation: contentShow 150ms;
 
   @keyframes contentShow {
     from {
@@ -46,7 +44,7 @@ export const Content = styled(Dialog.Content)`
     }
     to {
       opacity: 0;
-      transform: translate(-50%, -48%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
     }
   }
 `;

@@ -23,8 +23,8 @@ export function Card({ variant = 'balance', title, amount }: CardProps) {
   return (
     <Container $variant={variant}>
       {iconsMap[variant]}
-      <span> {title} </span>
-      <strong> {formatCurrency(amount)} </strong>
+      <span>{title}</span>
+      <strong>{formatCurrency(amount)}</strong>
     </Container>
   );
 }

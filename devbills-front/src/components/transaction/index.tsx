@@ -1,5 +1,5 @@
 import { formatCurrency } from '../../utils/format-currency';
-import { Container, Info, Content } from './style';
+import { Container, Info, Content } from './styles';
 
 type TransactionProps = {
   id: number;

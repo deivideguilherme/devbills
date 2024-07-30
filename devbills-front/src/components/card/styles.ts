@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 import { theme } from '../../styles/theme';
 
@@ -6,9 +6,9 @@ type ContainerProps = {
   $variant: 'balance' | 'incomes' | 'expenses';
 };
 
-const varinatColorMap = {
+const variantColorMap = {
   balance: theme.colors.info,
-  incomes: theme.colors.sucess,
+  incomes: theme.colors.success,
   expenses: theme.colors.error,
 };
 
@@ -24,7 +24,7 @@ export const Container = styled.div<ContainerProps>`
   svg {
     width: 1.75rem;
     height: 1.75rem;
-    color: ${(props) => varinatColorMap[props.$variant]};
+    fill: ${(props) => variantColorMap[props.$variant]};
   }
 
   span {
@@ -36,6 +36,6 @@ export const Container = styled.div<ContainerProps>`
   strong {
     font-size: 1.5rem;
     font-weight: 500;
-    color: ${(props) => varinatColorMap[props.$variant]};
+    color: ${(props) => variantColorMap[props.$variant]};
   }
 `;
