@@ -101,6 +101,7 @@ export function FetchAPIProvider({ children }: FetchAPIProviderProps) {
   const fetchFinancialEvolution = useCallback(
     async ({ year }: FinancialEvolutionFilterData) => {
       const financialEvolution = await APIService.getFinancialEvolution({
+        //O ano terá obrigatóriamente 4 digitos, na ausência dessa quantidade será preenchido por zero no início.
         year: year.padStart(4, '0'),
       });
 

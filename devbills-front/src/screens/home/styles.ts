@@ -112,7 +112,7 @@ export const TransactionGroup = styled.div`
 
 export const CategoryBadge = styled.span<CategoryBadgePros>`
   display: flex;
-  font-size: row;
+  flex-direction: row;
   align-items: center;
   gap: 0.25rem;
 
